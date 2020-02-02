@@ -13,42 +13,38 @@ public class RegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_register_);
 
-        final EditText name1 = findViewById(R.id.name);
-        final EditText email1 = findViewById(R.id.email);
+        final EditText name = findViewById(R.id.name);
+//        final EditText surname = findViewById(R.id.surname);
+//        final EditText phone = findViewById(R.id.phone);
+        final EditText email = findViewById(R.id.email);
+        Button registerBtn = findViewById(R.id.register_btn);
 
-        Button registerBtn1 = findViewById(R.id.register_btn1);
-
-        registerBtn1.setOnClickListener(new View.OnClickListener() {
+        registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //čia rašomas kodas, kuris bus vykdomas ant mygtuko paspaudimo//
-                String name = name1.getText().toString();
-                String email = email1.getText().toString();
-
-                email1.setError(null);
-
-                if (EmailValidation.isEmailValid(email)){
-                    //----------------------------------------------------iš kur-------------į kur---------//
-                    Intent gotoLoginActivity = new Intent(RegisterActivity.this, LoginActivity.class);
-                    startActivity(gotoLoginActivity);
-                } else {
-
-                    email1.setError(getResources().getString(R.string.register_invalid_email_message));
-                    email1.requestFocus();
-                }
-
-                Toast.makeText(RegisterActivity.this, "Name: " + name + "\n" + "email: "
-                        + email, Toast.LENGTH_SHORT).show();
-                //----------------------------------------------------iš kur-------------į kur---------//
-
+            //čia rašomas kodas, kuris bus vykdomas ant mygtuko paspaudimo//
+            String name2 = name.getText().toString();
+            String email2 = email.getText().toString();
+            boolean validEmail = InputValidator.isEmailValid(email2);
+            // purge error logs
+            email.setError(null);
+            if (!validEmail) {
+                //show error
+                email.setError(getResources().getString(R.string.register_invalid_email_message));
+                email.requestFocus();
+            }
+            //----------------------------------------------------iš kur-------------į kur---------//
+            if (validEmail) {
+                Toast.makeText(RegisterActivity.this, "Welcome aboard!", Toast.LENGTH_SHORT).show();
+                Intent gotoSearchActivity = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(gotoSearchActivity);
+            }
             }
         });
 
-
-
-
-
     }
+
 }
+
