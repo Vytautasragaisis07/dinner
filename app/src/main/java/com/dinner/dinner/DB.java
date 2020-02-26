@@ -28,7 +28,7 @@ public class DB {
             conn.setConnectTimeout(15000);
             conn.setRequestMethod("POST");
 
-            conn.setRequestProperty("Cookie", "__test=7a4d917e220fbf9a55cab3046bd1a3b7; Penktadienis, Sausio 1, 2038 at 1:55:55 AM; path=/");
+            conn.setRequestProperty("Cookie", "__test=7a4d917e220fbf9a55cab3046bd1a3b7; expires=2038 m. sausio 1 d., penktadienis 01:55:55; path=/");
             conn.setDoInput(true);
             conn.setDoOutput(true);
 
