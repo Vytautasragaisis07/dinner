@@ -15,7 +15,7 @@ import java.util.HashMap;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    public static final String DB_INSERT = "http://forfuncom.epizy.com/mobile/db.php";
+    public static final String DB_INSERT = "http://appdinner.epizy.com/mobile/db.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

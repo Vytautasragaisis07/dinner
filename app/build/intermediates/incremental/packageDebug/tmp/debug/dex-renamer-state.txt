@@ -1,4 +1,4 @@
-#Wed Feb 26 08:01:59 EET 2020
-base.0=D\:\\KITM\\Androidstudio\\alfredas\\Dinner_android_app\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+#Wed Feb 26 10:31:54 EET 2020
+base.0=C\:\\Users\\moksleivis\\Desktop\\dinner\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
