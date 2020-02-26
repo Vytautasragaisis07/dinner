@@ -6,7 +6,7 @@ package com.dinner.dinner;
 public class Validation {
     private static final String CREDENTIALS_PATTERN = "^[a-zA-Z]{3,20}$";
     /*
-     * validuoja ivestus vartotojo duomenis prisijungimo varda ir slaptazodi
+     * Validuoja ivestus vartotojo duomenis prisijungimo varda ir slaptazodi
      * @param perduodamas ivestas vartotojo vardas ir slaptazodis
      * @return true-jei duomenys yra teisingi, false-jei neteisingi
      */

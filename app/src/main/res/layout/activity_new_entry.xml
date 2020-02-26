@@ -7,13 +7,12 @@
     android:padding="10dp">
 
     <ScrollView
-        android:id="@+id/scroll"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
@@ -21,106 +20,87 @@
                 android:layout_height="wrap_content"
                 android:text="@string/new_entry_dinner_type"
                 android:textColor="@color/colorText"
-                android:textSize="20sp" />
+                android:textSize="20dp" />
 
             <CheckBox
-                android:id="@+id/soup"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="5dp"
-                android:text="@string/new_entry_dinner_type_soup"
-                android:checked="true"/>
+                android:layout_height="wrap_content"
+                android:text="@string/new_entry_dinner_type_soup" />
 
             <CheckBox
-                android:id="@+id/main"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="5dp"
-                android:text="@string/new_entry_dinner_type_main"
-                android:checked="true"/>
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/new_entry_dinner_type_main" />
 
             <CheckBox
-                android:id="@+id/salad"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="5dp"
-                android:text="@string/new_entry_dinner_type_salad"
-                android:checked="true"/>
+                android:layout_height="wrap_content"
+                android:text="@string/new_entry_dinner_type_salad" />
+
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/new_entry_delivery_type"
+                android:text="@string/new_entry_dinner_delivery_type"
                 android:textColor="@color/colorText"
-                android:textSize="20sp" />
+                android:textSize="20dp" />
 
             <RadioGroup
-                android:id="@+id/new_entry_delivery_group"
-                android:layout_width="wrap_content"
+                android:id="@+id/new_entry_dinner_delivery_group"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:weightSum="2">
 
                 <RadioButton
-                    android:id="@+id/new_entry_delivery_type_no_delivery"
-                    android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:checked="true"
-                    android:text="@string/new_entry_delivery_type_no_delivery" />
+                    android:layout_weight="1"
+                    android:text="@string/new_entry_dinner_delivery_type_yes" />
 
                 <RadioButton
-                    android:id="@+id/new_entry_delivery_type_yes_delivery"
-                    android:layout_weight="2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/new_entry_delivery_type_yes_delivery" />
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:text="@string/new_entry_dinner_delivery_type_no" />
+
             </RadioGroup>
 
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/new_entry_price"
+                android:text="@string/new_entry_dinner_price"
                 android:textColor="@color/colorText"
-                android:textSize="20sp" />
+                android:textSize="20dp" />
 
             <EditText
-                android:id="@+id/new_entry_price"
+                android:id="@+id/new_entry_dinner_price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:padding="10dp"/>
-
+                android:inputType="number" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/new_entry_payment_type"
+                android:text="@string/new_entry_dinner_payment_type"
                 android:textColor="@color/colorText"
-                android:textSize="20sp"/>
+                android:textSize="20dp" />
 
             <Spinner
-                android:id="@+id/payment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:entries="@array/new_entry_payment_type"
-                android:padding="10dp">
-
-            </Spinner>
+                android:entries="@array/new_entry_dinner_payment_type" />
 
             <Button
-                android:id="@+id/new_entry_create_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/new_entry_submit_btn"
-                android:background="@color/colorPrimary"/>
+                android:layout_marginTop="20dp"
+                android:background="@color/colorAccent"
+                android:text="@string/new_entry_button" />
 
 
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
-
-
-
-

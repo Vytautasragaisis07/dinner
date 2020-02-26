@@ -1,10 +1,11 @@
 package com.dinner.dinner;
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.widget.Button;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SearchActivity extends AppCompatActivity {
 
@@ -13,9 +14,9 @@ public class SearchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
-        Button newEntryBtn = findViewById(R.id.new_entry_btn);
 
-        newEntryBtn.setOnClickListener(new View.OnClickListener() {
+        Button newEntryButton = findViewById(R.id.new_entry_button);
+        newEntryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent gotoNewEntryActivity = new Intent(SearchActivity.this, NewEntryActivity.class);
@@ -23,5 +24,4 @@ public class SearchActivity extends AppCompatActivity {
             }
         });
     }
-
 }
